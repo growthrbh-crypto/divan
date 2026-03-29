@@ -3,34 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIVAN | Luxury Rituals</title>
+<title>DIVAN | Luxury Store</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
 /* ======================
-   BASE LUXURY STYLE
+   BASE
 ====================== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family:"Inter",sans-serif;
-  background:#f7f1e8; /* نفس البيج الفخم */
+  background:#f6f1e8;
   color:#1a1a1a;
 }
 
 /* ======================
-   TOP HERO (LIKE IMAGE)
+   HEADER
+====================== */
+header{
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.logo{
+  font-family:"Playfair Display",serif;
+  font-size:22px;
+  letter-spacing:2px;
+}
+
+.cart-btn{
+  cursor:pointer;
+  border:1px solid #b89b6a;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+/* ======================
+   HERO
 ====================== */
 .hero{
-  height:100vh;
-  background:
-    url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover no-repeat;
+  height:90vh;
+  background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -42,7 +66,7 @@ body{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(245,240,230,0.75);
+  background:rgba(246,241,232,0.75);
 }
 
 .hero-content{
@@ -51,57 +75,30 @@ body{
 
 .hero h1{
   font-family:"Playfair Display",serif;
-  font-size:60px;
-  letter-spacing:2px;
-  color:#2a3b2f; /* أخضر زيتوني فخم */
+  font-size:56px;
+  color:#2a3b2f;
 }
 
 .hero p{
   margin-top:10px;
-  font-size:14px;
-  letter-spacing:2px;
-  color:#6b6b6b;
+  color:#666;
 }
 
 /* ======================
-   BUTTON
-====================== */
-.btn{
-  margin-top:25px;
-  display:inline-block;
-  padding:12px 30px;
-  border:1px solid #b89b6a;
-  color:#b89b6a;
-  text-decoration:none;
-  border-radius:30px;
-  transition:0.4s;
-  font-size:12px;
-  letter-spacing:2px;
-}
-
-.btn:hover{
-  background:#b89b6a;
-  color:white;
-}
-
-/* ======================
-   SECTIONS
+   PRODUCTS
 ====================== */
 section{
-  padding:90px 10%;
+  padding:80px 10%;
   text-align:center;
 }
 
 h2{
   font-family:"Playfair Display",serif;
-  font-size:38px;
+  font-size:36px;
   margin-bottom:40px;
   color:#2a3b2f;
 }
 
-/* ======================
-   PRODUCTS (DIVAN STYLE)
-====================== */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -111,9 +108,9 @@ h2{
 .card{
   background:white;
   border-radius:18px;
-  padding:20px;
+  padding:18px;
   box-shadow:0 15px 40px rgba(0,0,0,0.05);
-  transition:0.5s;
+  transition:0.4s;
 }
 
 .card:hover{
@@ -123,57 +120,85 @@ h2{
 .img{
   height:180px;
   border-radius:14px;
-  background:
-    linear-gradient(135deg,#e9e1d6,#f7f1e8);
+  background:linear-gradient(135deg,#e9e1d6,#f7f1e8);
   margin-bottom:15px;
 }
 
 .card h3{
   font-family:"Playfair Display",serif;
-  color:#2a3b2f;
 }
 
-.card p{
-  font-size:12px;
-  color:#777;
-  margin-top:5px;
+.price{
+  color:#b89b6a;
+  margin:8px 0;
 }
 
 /* ======================
-   STORY BLOCK (LIKE BRAND IMAGE)
+   BUTTON
 ====================== */
-.story{
-  background:#2a3b2f;
+.btn{
+  display:inline-block;
+  padding:10px 20px;
+  border:1px solid #b89b6a;
+  border-radius:25px;
+  font-size:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#b89b6a;
   color:white;
 }
 
-.story p{
-  max-width:700px;
-  margin:auto;
-  line-height:1.8;
-  opacity:0.85;
+/* ======================
+   CART SIDEBAR
+====================== */
+.cart{
+  position:fixed;
+  right:-400px;
+  top:0;
+  width:350px;
+  height:100%;
+  background:white;
+  box-shadow:-10px 0 30px rgba(0,0,0,0.1);
+  padding:20px;
+  transition:0.4s;
+  z-index:100;
+}
+
+.cart.open{
+  right:0;
+}
+
+.cart h3{
+  font-family:"Playfair Display",serif;
+  margin-bottom:20px;
+}
+
+.cart-item{
+  margin-bottom:15px;
+  border-bottom:1px solid #eee;
+  padding-bottom:10px;
 }
 
 /* ======================
-   INGREDIENTS
+   OVERLAY
 ====================== */
-.ingredients{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  font-size:14px;
-  color:#444;
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.3);
+  display:none;
 }
 
-/* ======================
-   FINAL IMAGE STYLE CTA
-====================== */
-.cta{
-  background:#f1e6d7;
+.overlay.show{
+  display:block;
 }
 
-.cta h2{
-  color:#2a3b2f;
+@media(max-width:768px){
+  .grid{grid-template-columns:1fr;}
+  .hero h1{font-size:34px;}
 }
 
 </style>
@@ -181,66 +206,89 @@ h2{
 
 <body>
 
-<!-- HERO (LIKE YOUR IMAGE STYLE) -->
+<!-- HEADER -->
+<header>
+  <div class="logo">DIVAN</div>
+  <div class="cart-btn" onclick="toggleCart()">Cart 🛒 (<span id="count">0</span>)</div>
+</header>
+
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Harsha + Deep</h1>
-    <p>Together Forever • Luxury Ritual Experience</p>
-    <a class="btn" href="#shop">Explore Ritual</a>
+    <h1>Luxury Ritual Store</h1>
+    <p>Where skincare becomes elegance</p>
   </div>
 </section>
 
-<!-- PRODUCTS (FROM DIVAN STYLE) -->
-<section id="shop">
-  <h2>Signature Rituals</h2>
+<!-- PRODUCTS -->
+<section>
+  <h2>Signature Collection</h2>
 
   <div class="grid">
 
     <div class="card">
       <div class="img"></div>
-      <h3>Silk Body Lotion</h3>
-      <p>Deep hydration & soft glow</p>
+      <h3>Silk Lotion</h3>
+      <div class="price">$48</div>
+      <div class="btn" onclick="add('Silk Lotion')">Add to Cart</div>
     </div>
 
     <div class="card">
       <div class="img"></div>
       <h3>Velvet Shampoo</h3>
-      <p>9 oils nourishment blend</p>
+      <div class="price">$32</div>
+      <div class="btn" onclick="add('Velvet Shampoo')">Add to Cart</div>
     </div>
 
     <div class="card">
       <div class="img"></div>
-      <h3>Glow Shower Gel</h3>
-      <p>Luxury cleansing ritual</p>
+      <h3>Glow Cleanser</h3>
+      <div class="price">$40</div>
+      <div class="btn" onclick="add('Glow Cleanser')">Add to Cart</div>
     </div>
 
   </div>
 </section>
 
-<!-- STORY -->
-<section class="story">
-  <h2>The Divan Philosophy</h2>
-  <p>
-    A ritual inspired by softness, purity, and natural elegance.
-    We design skincare not as products… but as experiences of calm luxury.
-  </p>
-</section>
+<!-- CART -->
+<div class="cart" id="cart">
+  <h3>Your Ritual</h3>
+  <div id="cartItems"></div>
+</div>
 
-<!-- INGREDIENTS -->
-<section>
-  <h2>Core Ingredients</h2>
-  <div class="ingredients">
-    <div>🌿 Botanical Oils</div>
-    <div>🌊 Marine Extracts</div>
-    <div>🧪 Clean Science</div>
-  </div>
-</section>
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Discover Your Ritual</h2>
-  <a class="btn" href="#">Shop Now</a>
-</section>
+<script>
+
+let cart = [];
+let count = 0;
+
+function add(item){
+  cart.push(item);
+  count++;
+  document.getElementById("count").innerText = count;
+
+  renderCart();
+}
+
+function renderCart(){
+  let box = document.getElementById("cartItems");
+  box.innerHTML = "";
+
+  cart.forEach(i=>{
+    let div = document.createElement("div");
+    div.className = "cart-item";
+    div.innerText = i;
+    box.appendChild(div);
+  });
+}
+
+function toggleCart(){
+  document.getElementById("cart").classList.toggle("open");
+  document.getElementById("overlay").classList.toggle("show");
+}
+
+</script>
 
 </body>
 </html>
