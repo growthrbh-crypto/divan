@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIVAN | Haute Skincare</title>
+<title>DIVAN | Luxury Rituals</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-/* =======================
-   LUXURY BASE
-======================= */
+/* ======================
+   BASE LUXURY STYLE
+====================== */
 *{
   margin:0;
   padding:0;
@@ -20,155 +20,160 @@
 
 body{
   font-family:"Inter",sans-serif;
-  background:#0e0e0e;
-  color:#fff;
-  overflow-x:hidden;
+  background:#f7f1e8; /* نفس البيج الفخم */
+  color:#1a1a1a;
 }
 
-/* =======================
-   HERO CINEMATIC
-======================= */
+/* ======================
+   TOP HERO (LIKE IMAGE)
+====================== */
 .hero{
   height:100vh;
-  background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover no-repeat;
+  background:
+    url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
   position:relative;
-  filter: contrast(1.1) brightness(0.7);
 }
 
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-  background: radial-gradient(circle, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+  background:rgba(245,240,230,0.75);
 }
 
 .hero-content{
   position:relative;
-  animation: fadeUp 1.5s ease;
 }
 
 .hero h1{
   font-family:"Playfair Display",serif;
-  font-size:64px;
+  font-size:60px;
   letter-spacing:2px;
+  color:#2a3b2f; /* أخضر زيتوني فخم */
 }
 
 .hero p{
-  margin-top:15px;
-  opacity:0.7;
-  font-weight:300;
+  margin-top:10px;
+  font-size:14px;
+  letter-spacing:2px;
+  color:#6b6b6b;
 }
 
+/* ======================
+   BUTTON
+====================== */
 .btn{
-  margin-top:30px;
+  margin-top:25px;
   display:inline-block;
-  padding:14px 34px;
-  border:1px solid #c8a96a;
-  color:#c8a96a;
+  padding:12px 30px;
+  border:1px solid #b89b6a;
+  color:#b89b6a;
   text-decoration:none;
-  border-radius:50px;
+  border-radius:30px;
   transition:0.4s;
-  letter-spacing:1px;
+  font-size:12px;
+  letter-spacing:2px;
 }
 
 .btn:hover{
-  background:#c8a96a;
-  color:#111;
+  background:#b89b6a;
+  color:white;
 }
 
-/* =======================
+/* ======================
    SECTIONS
-======================= */
+====================== */
 section{
-  padding:100px 10%;
+  padding:90px 10%;
   text-align:center;
 }
 
 h2{
   font-family:"Playfair Display",serif;
-  font-size:40px;
+  font-size:38px;
   margin-bottom:40px;
-  letter-spacing:1px;
+  color:#2a3b2f;
 }
 
-/* =======================
-   PRODUCTS (LUX GRID)
-======================= */
+/* ======================
+   PRODUCTS (DIVAN STYLE)
+====================== */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:30px;
+  gap:25px;
 }
 
 .card{
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.08);
-  padding:25px;
+  background:white;
   border-radius:18px;
-  backdrop-filter: blur(10px);
+  padding:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.05);
   transition:0.5s;
 }
 
 .card:hover{
-  transform:translateY(-10px);
-  border-color:#c8a96a;
+  transform:translateY(-8px);
 }
 
 .img{
-  height:200px;
+  height:180px;
   border-radius:14px;
-  background:linear-gradient(135deg,#2a2a2a,#111);
-  margin-bottom:20px;
+  background:
+    linear-gradient(135deg,#e9e1d6,#f7f1e8);
+  margin-bottom:15px;
 }
 
-/* =======================
-   STORY SECTION
-======================= */
+.card h3{
+  font-family:"Playfair Display",serif;
+  color:#2a3b2f;
+}
+
+.card p{
+  font-size:12px;
+  color:#777;
+  margin-top:5px;
+}
+
+/* ======================
+   STORY BLOCK (LIKE BRAND IMAGE)
+====================== */
 .story{
-  background:#0b0b0b;
+  background:#2a3b2f;
+  color:white;
 }
 
-/* =======================
+.story p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+  opacity:0.85;
+}
+
+/* ======================
    INGREDIENTS
-======================= */
+====================== */
 .ingredients{
   display:flex;
   justify-content:center;
   gap:40px;
-  font-size:18px;
-  opacity:0.85;
+  font-size:14px;
+  color:#444;
 }
 
-/* =======================
-   CTA
-======================= */
+/* ======================
+   FINAL IMAGE STYLE CTA
+====================== */
 .cta{
-  background:linear-gradient(135deg,#111,#1a1a1a);
+  background:#f1e6d7;
 }
 
 .cta h2{
-  color:#c8a96a;
-}
-
-/* =======================
-   ANIMATION
-======================= */
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(30px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-/* =======================
-   RESPONSIVE
-======================= */
-@media(max-width:768px){
-  .grid{grid-template-columns:1fr;}
-  .hero h1{font-size:36px;}
-  .ingredients{flex-direction:column;}
+  color:#2a3b2f;
 }
 
 </style>
@@ -176,37 +181,37 @@ h2{
 
 <body>
 
-<!-- HERO -->
+<!-- HERO (LIKE YOUR IMAGE STYLE) -->
 <section class="hero">
   <div class="hero-content">
-    <h1>DIVAN</h1>
-    <p>Haute Skincare Rituals</p>
-    <a href="#products" class="btn">Enter Collection</a>
+    <h1>Harsha + Deep</h1>
+    <p>Together Forever • Luxury Ritual Experience</p>
+    <a class="btn" href="#shop">Explore Ritual</a>
   </div>
 </section>
 
-<!-- PRODUCTS -->
-<section id="products">
-  <h2>Signature Collection</h2>
+<!-- PRODUCTS (FROM DIVAN STYLE) -->
+<section id="shop">
+  <h2>Signature Rituals</h2>
 
   <div class="grid">
 
     <div class="card">
       <div class="img"></div>
-      <h3>Radiance Serum</h3>
-      <p>Marine-infused glow therapy</p>
+      <h3>Silk Body Lotion</h3>
+      <p>Deep hydration & soft glow</p>
     </div>
 
     <div class="card">
       <div class="img"></div>
-      <h3>Velvet Cleanser</h3>
-      <p>Soft purification ritual</p>
+      <h3>Velvet Shampoo</h3>
+      <p>9 oils nourishment blend</p>
     </div>
 
     <div class="card">
       <div class="img"></div>
-      <h3>Hydra Cream</h3>
-      <p>Deep hydration architecture</p>
+      <h3>Glow Shower Gel</h3>
+      <p>Luxury cleansing ritual</p>
     </div>
 
   </div>
@@ -214,28 +219,27 @@ h2{
 
 <!-- STORY -->
 <section class="story">
-  <h2>The House of DIVAN</h2>
-  <p style="max-width:700px;margin:auto;opacity:0.7;line-height:1.8;">
-    Born from marine biotechnology and refined aesthetics,
-    DIVAN redefines skincare as a luxury ritual —
-    where science meets silence, and elegance meets skin.
+  <h2>The Divan Philosophy</h2>
+  <p>
+    A ritual inspired by softness, purity, and natural elegance.
+    We design skincare not as products… but as experiences of calm luxury.
   </p>
 </section>
 
 <!-- INGREDIENTS -->
 <section>
-  <h2>Core Elements</h2>
+  <h2>Core Ingredients</h2>
   <div class="ingredients">
-    <div>🌊 Marine Biotechnology</div>
     <div>🌿 Botanical Oils</div>
-    <div>🧪 Clinical Actives</div>
+    <div>🌊 Marine Extracts</div>
+    <div>🧪 Clean Science</div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
   <h2>Discover Your Ritual</h2>
-  <a href="#" class="btn">Shop Now</a>
+  <a class="btn" href="#">Shop Now</a>
 </section>
 
 </body>
