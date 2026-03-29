@@ -1,261 +1,346 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIVAN | Luxury Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ديڤان | أسلوب حياة أكثر نقاءً</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #c5a059; /* ذهبي ديفان */
+            --bg-creme: #f9f7f2; /* بيج فاتح فاخر */
+            --text-gray: #555;
+            --white: #ffffff;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
 
-<style>
+        body {
+            background-color: var(--bg-creme);
+            color: var(--primary);
+            overflow-x: hidden;
+        }
 
-/* ===== BASE ===== */
-*{margin:0;padding:0;box-sizing:border-box;}
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
 
-body{
-  font-family:"Inter",sans-serif;
-  background:#f7f1e8;
-  color:#1a1a1a;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--primary);
+            text-decoration: none;
+        }
 
-/* ===== HEADER ===== */
-header{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 10%;
-  background:rgba(255,255,255,0.6);
-  backdrop-filter:blur(10px);
-  position:sticky;
-  top:0;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-.logo{
-  font-family:"Playfair Display";
-  font-size:22px;
-  letter-spacing:2px;
-  color:#2a3b2f;
-}
+        .nav-links a:hover {
+            color: var(--accent);
+        }
 
-/* ===== HERO ===== */
-.hero{
-  height:90vh;
-  background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-}
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 20px;
+        }
 
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(247,241,232,0.75);
-}
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('https://divansa.com/storage/images/banners/1715024410_663a8a1a367ba.jpg'); /* خلفية مستوحاة من المتجر */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin-top: 60px;
+        }
 
-.hero-content{
-  position:relative;
-}
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
 
-.hero h1{
-  font-family:"Playfair Display";
-  font-size:60px;
-  color:#2a3b2f;
-}
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
 
-.hero p{
-  margin-top:10px;
-  color:#777;
-}
+        .btn-main {
+            padding: 12px 40px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 600;
+            transition: 0.4s;
+            display: inline-block;
+            border: 1px solid var(--accent);
+        }
 
-/* ===== PRODUCTS ===== */
-section{
-  padding:80px 10%;
-  text-align:center;
-}
+        .btn-main:hover {
+            background: transparent;
+            color: var(--accent);
+        }
 
-h2{
-  font-family:"Playfair Display";
-  font-size:34px;
-  margin-bottom:40px;
-  color:#2a3b2f;
-}
+        /* Products Grid */
+        .container {
+            padding: 80px 8%;
+        }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-}
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
 
-.card{
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
-  transition:0.4s;
-}
+        .section-header h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
 
-.card:hover{
-  transform:translateY(-10px);
-}
+        .section-header h2::after {
+            content: '';
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-/* صورة المنتج */
-.card img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
-}
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
 
-/* محتوى المنتج */
-.card-body{
-  padding:15px;
-}
+        .product-card {
+            background: var(--white);
+            padding: 0;
+            transition: 0.5s;
+            position: relative;
+            border: 1px solid #eee;
+        }
 
-.card h3{
-  font-family:"Playfair Display";
-  margin-bottom:5px;
-}
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
 
-.price{
-  color:#b89b6a;
-  margin:10px 0;
-}
+        .image-container {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            background: #fbfbfb;
+        }
 
-/* زر */
-.btn{
-  display:inline-block;
-  padding:10px 20px;
-  border:1px solid #b89b6a;
-  border-radius:25px;
-  cursor:pointer;
-  transition:0.3s;
-}
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: 0.5s;
+        }
 
-.btn:hover{
-  background:#b89b6a;
-  color:white;
-}
+        .product-card:hover img {
+            transform: scale(1.08);
+        }
 
-/* ===== CART ===== */
-.cart{
-  position:fixed;
-  right:-350px;
-  top:0;
-  width:320px;
-  height:100%;
-  background:white;
-  padding:20px;
-  box-shadow:-10px 0 30px rgba(0,0,0,0.1);
-  transition:0.4s;
-}
+        .product-info {
+            padding: 25px;
+            text-align: center;
+        }
 
-.cart.open{
-  right:0;
-}
+        .product-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            min-height: 50px;
+        }
 
-.overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.3);
-  display:none;
-}
+        .price {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
 
-.overlay.show{
-  display:block;
-}
+        .add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-  .grid{grid-template-columns:1fr;}
-  .hero h1{font-size:34px;}
-}
+        .add-to-cart:hover {
+            background: var(--accent);
+        }
 
-</style>
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 8% 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 30px;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .socials {
+            margin: 20px 0;
+        }
+
+        .socials i {
+            font-size: 20px;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .socials i:hover {
+            color: var(--accent);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">DIVAN</div>
-  <div onclick="toggleCart()">🛒 (<span id="count">0</span>)</div>
-</header>
+    <header>
+        <a href="#" class="logo">DIVAN</a>
+        <nav class="nav-links">
+            <a href="#">الرئيسية</a>
+            <a href="#">وكلاء العناية</a>
+            <a href="#">ديڤان للمنظفات</a>
+            <a href="#">من نحن</a>
+        </nav>
+        <div class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Luxury Rituals</h1>
-    <p>تجربة عناية فاخرة مستوحاة من الطبيعة</p>
-  </div>
-</section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ديڤان.. أسلوب حياة</h1>
+            <p>تجربة تهتم بكل تفصيلة صغيرة تفرق في يومك</p>
+            <a href="#shop" class="btn-main">تسوق الآن</a>
+        </div>
+    </section>
 
-<!-- PRODUCTS -->
-<section>
-  <h2>منتجات ديفان</h2>
+    <div class="container" id="shop">
+        <div class="section-header">
+            <h2>أحدث المنتجات</h2>
+        </div>
 
-  <div class="grid">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="https://divansa.com/storage/images/products/360452681.jpg" alt="لوشن وجل استحمام">
+                </div>
+                <div class="product-info">
+                    <h3>لوشن الجسم + جل الاستحمام سيرين داسكي</h3>
+                    <span class="price">25.99 ر.س</span>
+                    <button class="add-to-cart">أضف للسلة</button>
+                </div>
+            </div>
 
-    <!-- لوشن -->
-    <div class="card">
-      <img src="https://divansa.com/storage/images/products/360452681.jpg">
-      <div class="card-body">
-        <h3>لوشن + جل استحمام</h3>
-        <div class="price">25.99 SAR</div>
-        <div class="btn" onclick="add('لوشن')">أضف للسلة</div>
-      </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="https://divansa.com/storage/images/products/535672142.jpg" alt="شامبو وبلسم">
+                </div>
+                <div class="product-info">
+                    <h3>مجموعة الشامبو والبلسم الفاخرة</h3>
+                    <span class="price">22.55 ر.س</span>
+                    <button class="add-to-cart">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="https://divansa.com/storage/images/products/1715024410_663a8a1a31d7e.jpg" alt="زبدة الشيا">
+                </div>
+                <div class="product-info">
+                    <h3>مجموعة زبدة الشيا الأفريقية الأصلية</h3>
+                    <span class="price">195.00 ر.س</span>
+                    <button class="add-to-cart">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="https://divansa.com/storage/images/products/1715024411_663a8a1b4e5d6.jpg" alt="منظف لافندر">
+                </div>
+                <div class="product-info">
+                    <h3>ديڤان لافندر منظف ومطهر للقصور (3 لتر)</h3>
+                    <span class="price">39.00 ر.س</span>
+                    <button class="add-to-cart">أضف للسلة</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- شامبو -->
-    <div class="card">
-      <img src="https://divansa.com/storage/images/products/535672142.jpg">
-      <div class="card-body">
-        <h3>شامبو وبلسم</h3>
-        <div class="price">22.55 SAR</div>
-        <div class="btn" onclick="add('شامبو')">أضف للسلة</div>
-      </div>
-    </div>
-
-    <!-- منتج ثالث -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03">
-      <div class="card-body">
-        <h3>Glow Body Care</h3>
-        <div class="price">40 SAR</div>
-        <div class="btn" onclick="add('Glow')">أضف للسلة</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CART -->
-<div class="cart" id="cart">
-  <h3>سلة المشتريات</h3>
-  <div id="items"></div>
-</div>
-
-<div class="overlay" id="overlay" onclick="toggleCart()"></div>
-
-<script>
-let cart=[];
-let count=0;
-
-function add(name){
-  cart.push(name);
-  count++;
-  document.getElementById("count").innerText=count;
-
-  let items=document.getElementById("items");
-  let div=document.createElement("div");
-  div.innerText=name;
-  items.appendChild(div);
-}
-
-function toggleCart(){
-  document.getElementById("cart").classList.toggle("open");
-  document.getElementById("overlay").classList.toggle("show");
-}
-</script>
+    <footer>
+        <span class="footer-logo">DIVAN</span>
+        <p>مصنع سعودي، مورد لمنتجات العناية والنظافة الفاخرة</p>
+        <div class="socials">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-snapchat"></i>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <p style="font-size: 12px; opacity: 0.6; margin-top: 20px;">&copy; 2026 ديڤان. جميع الحقوق محفوظة.</p>
+    </footer>
 
 </body>
 </html>
