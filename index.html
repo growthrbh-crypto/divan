@@ -1,157 +1,86 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Divan | ديفان</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divan Luxury Skincare</title>
 
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f7f3ee;
-color:#1f1f1f;
-}
+  <link rel="stylesheet" href="style.css">
 
-/* Top bar */
-.top-bar{
-background:#1f1f1f;
-color:#d6b36a;
-text-align:center;
-padding:10px;
-font-size:14px;
-}
-
-/* Hero */
-.hero{
-text-align:center;
-padding:100px 20px;
-}
-
-.hero h1{
-font-size:60px;
-margin:0;
-letter-spacing:2px;
-}
-
-.hero p{
-font-size:20px;
-color:#555;
-margin-top:10px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#d6b36a;
-color:white;
-text-decoration:none;
-border-radius:30px;
-}
-
-/* Products */
-.products{
-padding:60px 20px;
-text-align:center;
-}
-
-.grid{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.card{
-background:white;
-padding:20px;
-width:250px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
-
-.card button{
-margin-top:10px;
-padding:10px;
-border:none;
-background:#1f1f1f;
-color:white;
-border-radius:10px;
-cursor:pointer;
-}
-
-/* Story */
-.story{
-padding:80px 20px;
-text-align:center;
-background:white;
-margin-top:30px;
-}
-
-/* WhatsApp */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:12px 18px;
-border-radius:50px;
-text-decoration:none;
-}
-</style>
-
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="top-bar">
-عرض خاص ✨ تجربة الفخامة الهادئة من ديفان
-</div>
-
-<header class="hero">
-<h1>ديفان</h1>
-<p>لمسة الرفاهية في كل زاوية من منزلك</p>
-<a class="btn" href="#products">اكتشف المنتجات</a>
-</header>
-
-<section id="products" class="products">
-<h2>الأكثر مبيعاً</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>صقر الحرمين</h3>
-<p>نقاء يعكس الفخامة الهادئة</p>
-<button>أضف للسلة</button>
-</div>
-
-<div class="card">
-<h3>ديڤان الأكدر</h3>
-<p>انتعاش يدوم طوال اليوم</p>
-<button>أضف للسلة</button>
-</div>
-
-<div class="card">
-<h3>إيفان</h3>
-<p>تجربة تنظيف راقية بمعايير عالمية</p>
-<button>أضف للسلة</button>
-</div>
-
-</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Luxury skincare, redefined.</h1>
+    <p>Minimal ritual. Maximum elegance.</p>
+    <a href="#products" class="btn">Explore Collection</a>
+  </div>
 </section>
 
-<section class="story">
-<h2>قصة ديفان</h2>
-<p>
-في ديفان لا نصنع منظفات فقط، بل نصنع إحساس بالنقاء وتجربة رفاهية في كل تفصيلة.
-</p>
+<!-- PRODUCTS -->
+<section id="products" class="section">
+  <h2>Best Sellers</h2>
+
+  <div class="grid">
+    <div class="card">
+      <div class="img"></div>
+      <h3>Radiance Serum</h3>
+    </div>
+
+    <div class="card">
+      <div class="img"></div>
+      <h3>Gentle Cleanser</h3>
+    </div>
+
+    <div class="card">
+      <div class="img"></div>
+      <h3>Hydra Cream</h3>
+    </div>
+  </div>
 </section>
 
-<a class="whatsapp" href="https://wa.me/966000000000" target="_blank">
-واتساب
-</a>
+<!-- STORY -->
+<section class="section dark">
+  <h2>Brand Story</h2>
+  <p>
+    A refined skincare ritual inspired by marine extracts, botanical oils,
+    and advanced science. Designed for timeless skin health.
+  </p>
+</section>
 
+<!-- INGREDIENTS -->
+<section class="section">
+  <h2>Ingredients</h2>
+
+  <div class="ingredients">
+    <div>🌊 Marine Extracts</div>
+    <div>🌿 Botanical Oils</div>
+    <div>🧪 Active Science</div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section dark">
+  <h2>Reviews</h2>
+
+  <div class="reviews">
+    <p>"The most elegant skincare experience." — Sara</p>
+    <p>"Minimal but extremely effective." — Lina</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Discover your ritual</h2>
+  <a href="#" class="btn">Shop Now</a>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
