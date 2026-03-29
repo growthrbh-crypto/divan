@@ -1,194 +1,242 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ديفان | Divan - Luxury Rituals</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --matte-black: #1a1a1a;
-            --soft-white: #fcfcfc;
-            --champagne-gold: #c5a059;
-            --sand-beige: #f5f2ed; /* لون الخلفية المفضل */
-            --muted-olive: #707a65;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIVAN | Haute Skincare</title>
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--sand-beige);
-            color: var(--matte-black);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
+<style>
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80') center/cover no-repeat;
-            color: var(--soft-white);
-            padding: 20px;
-        }
+/* =======================
+   LUXURY BASE
+======================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeIn 2s ease-in;
-        }
+body{
+  font-family:"Inter",sans-serif;
+  background:#0e0e0e;
+  color:#fff;
+  overflow-x:hidden;
+}
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+/* =======================
+   HERO CINEMATIC
+======================= */
+.hero{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  filter: contrast(1.1) brightness(0.7);
+}
 
-        .btn-gold {
-            padding: 15px 40px;
-            background-color: transparent;
-            border: 1px solid var(--champagne-gold);
-            color: var(--champagne-gold);
-            text-decoration: none;
-            transition: 0.4s;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+}
 
-        .btn-gold:hover {
-            background-color: var(--champagne-gold);
-            color: white;
-        }
+.hero-content{
+  position:relative;
+  animation: fadeUp 1.5s ease;
+}
 
-        /* Best Sellers Section */
-        .section {
-            padding: 100px 10%;
-            text-align: center;
-        }
+.hero h1{
+  font-family:"Playfair Display",serif;
+  font-size:64px;
+  letter-spacing:2px;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
+.hero p{
+  margin-top:15px;
+  opacity:0.7;
+  font-weight:300;
+}
 
-        .product-card {
-            background: var(--soft-white);
-            padding: 0;
-            transition: transform 0.3s ease;
-            border: none;
-        }
+.btn{
+  margin-top:30px;
+  display:inline-block;
+  padding:14px 34px;
+  border:1px solid #c8a96a;
+  color:#c8a96a;
+  text-decoration:none;
+  border-radius:50px;
+  transition:0.4s;
+  letter-spacing:1px;
+}
 
-        .product-card:hover {
-            transform: translateY(-10px);
-        }
+.btn:hover{
+  background:#c8a96a;
+  color:#111;
+}
 
-        .product-img {
-            width: 100%;
-            height: 400px;
-            background-color: #eee;
-            object-fit: cover;
-        }
+/* =======================
+   SECTIONS
+======================= */
+section{
+  padding:100px 10%;
+  text-align:center;
+}
 
-        .product-info {
-            padding: 25px;
-        }
+h2{
+  font-family:"Playfair Display",serif;
+  font-size:40px;
+  margin-bottom:40px;
+  letter-spacing:1px;
+}
 
-        .product-info h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.4rem;
-        }
+/* =======================
+   PRODUCTS (LUX GRID)
+======================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
 
-        .price {
-            color: var(--champagne-gold);
-            font-weight: bold;
-            display: block;
-            margin-bottom: 15px;
-        }
+.card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:18px;
+  backdrop-filter: blur(10px);
+  transition:0.5s;
+}
 
-        /* Brand Story */
-        .brand-story {
-            background-color: var(--matte-black);
-            color: var(--soft-white);
-            padding: 120px 20%;
-            text-align: center;
-        }
+.card:hover{
+  transform:translateY(-10px);
+  border-color:#c8a96a;
+}
 
-        .brand-story p {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-style: italic;
-        }
+.img{
+  height:200px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#2a2a2a,#111);
+  margin-bottom:20px;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+/* =======================
+   STORY SECTION
+======================= */
+.story{
+  background:#0b0b0b;
+}
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .section { padding: 60px 5%; }
-        }
-    </style>
+/* =======================
+   INGREDIENTS
+======================= */
+.ingredients{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  font-size:18px;
+  opacity:0.85;
+}
+
+/* =======================
+   CTA
+======================= */
+.cta{
+  background:linear-gradient(135deg,#111,#1a1a1a);
+}
+
+.cta h2{
+  color:#c8a96a;
+}
+
+/* =======================
+   ANIMATION
+======================= */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media(max-width:768px){
+  .grid{grid-template-columns:1fr;}
+  .hero h1{font-size:36px;}
+  .ingredients{flex-direction:column;}
+}
+
+</style>
 </head>
+
 <body>
 
-    <section class="hero">
-        <p>Luxury Skincare, Redefined</p>
-        <h1>ديفان: طقوس العناية الفاخرة</h1>
-        <a href="#collection" class="btn-gold">Explore Collection</a>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>DIVAN</h1>
+    <p>Haute Skincare Rituals</p>
+    <a href="#products" class="btn">Enter Collection</a>
+  </div>
+</section>
 
-    <section id="collection" class="section">
-        <h2>أبرز المختارات</h2>
-        <div class="grid">
-            <div class="product-card">
-                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80'); background-size: cover;"></div>
-                <div class="product-info">
-                    <h3>إيفان صقر الحرمين</h3>
-                    <span class="price">75 SAR</span>
-                    <a href="#" class="btn-gold" style="font-size: 0.7rem; padding: 10px 20px;">أضف للسلة</a>
-                </div>
-            </div>
+<!-- PRODUCTS -->
+<section id="products">
+  <h2>Signature Collection</h2>
 
-            <div class="product-card">
-                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80'); background-size: cover;"></div>
-                <div class="product-info">
-                    <h3>سيروم الترطيب العميق</h3>
-                    <span class="price">120 SAR</span>
-                    <a href="#" class="btn-gold" style="font-size: 0.7rem; padding: 10px 20px;">أضف للسلة</a>
-                </div>
-            </div>
+  <div class="grid">
 
-            <div class="product-card">
-                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80'); background-size: cover;"></div>
-                <div class="product-info">
-                    <h3>مجموعة النظافة الشاملة</h3>
-                    <span class="price">210 SAR</span>
-                    <a href="#" class="btn-gold" style="font-size: 0.7rem; padding: 10px 20px;">أضف للسلة</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="card">
+      <div class="img"></div>
+      <h3>Radiance Serum</h3>
+      <p>Marine-infused glow therapy</p>
+    </div>
 
-    <section class="brand-story">
-        <p>"نحن لا نصنع منظفات فقط، نحن نصنع طقوساً تمنح منزلك وبشرتك الاحترام الذي يستحقانه."</p>
-        <div style="color: var(--champagne-gold); margin-top: 20px;">— فلسفة ديفان</div>
-    </section>
+    <div class="card">
+      <div class="img"></div>
+      <h3>Velvet Cleanser</h3>
+      <p>Soft purification ritual</p>
+    </div>
+
+    <div class="card">
+      <div class="img"></div>
+      <h3>Hydra Cream</h3>
+      <p>Deep hydration architecture</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <h2>The House of DIVAN</h2>
+  <p style="max-width:700px;margin:auto;opacity:0.7;line-height:1.8;">
+    Born from marine biotechnology and refined aesthetics,
+    DIVAN redefines skincare as a luxury ritual —
+    where science meets silence, and elegance meets skin.
+  </p>
+</section>
+
+<!-- INGREDIENTS -->
+<section>
+  <h2>Core Elements</h2>
+  <div class="ingredients">
+    <div>🌊 Marine Biotechnology</div>
+    <div>🌿 Botanical Oils</div>
+    <div>🧪 Clinical Actives</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Discover Your Ritual</h2>
+  <a href="#" class="btn">Shop Now</a>
+</section>
 
 </body>
 </html>
