@@ -4,334 +4,205 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ديڤان | أسلوب حياة فاخر</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>مقشر السكر الرغوي | تجربة فاخرة لبشرة ناعمة</title>
 
 <style>
-:root{
-    --beige:#f5efe6;
-    --navy:#1c2a39;
-    --light:#ffffff;
-    --text:#111111;
-    --soft:#e8e1d8;
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    background: #f5f1ea;
+    color: #1c1c1c;
 }
 
-/* Reset */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Tajawal',sans-serif;
-}
-
-body{
-    background:var(--beige);
-    color:var(--text);
-}
-
-/* Header */
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    backdrop-filter: blur(10px);
-    background:rgba(245,239,230,0.8);
-    border-bottom:1px solid var(--soft);
-}
-
-.logo{
-    font-size:22px;
-    font-weight:700;
-    letter-spacing:3px;
-    color:var(--navy);
-}
-
-.nav-links a{
-    text-decoration:none;
-    margin-right:25px;
-    color:var(--text);
-    font-size:14px;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:var(--navy);
-}
-
-.cart-icon{
-    font-size:20px;
-    color:var(--navy);
-    cursor:pointer;
+/* Navbar */
+.nav {
+    background: #0f172a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 
 /* Hero */
-.hero{
-    height:95vh;
-    background:
-    linear-gradient(rgba(28,42,57,0.55),rgba(28,42,57,0.55)),
-    url('https://divansa.com/storage/images/banners/1715024410_663a8a1a367ba.jpg');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
+.hero {
+    text-align: center;
+    padding: 50px 20px;
 }
 
-.hero h1{
-    font-size:3.2rem;
-    margin-bottom:20px;
-    animation:fadeUp 1s ease;
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-.hero p{
-    margin-bottom:30px;
-    opacity:.9;
+.hero p {
+    color: #555;
+}
+
+/* Product */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Price */
+.price {
+    font-size: 28px;
+    color: #0f172a;
+    margin: 15px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 18px;
 }
 
 /* Button */
-.btn{
-    padding:14px 45px;
-    border:1px solid var(--light);
-    color:white;
-    text-decoration:none;
-    transition:.4s;
+.btn {
+    background: #0f172a;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.btn:hover{
-    background:var(--light);
-    color:var(--navy);
+.btn:hover {
+    background: #1e293b;
 }
 
-/* Section */
-.container{
-    padding:100px 8%;
+/* Features */
+.features {
+    margin-top: 20px;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
+.features li {
+    margin-bottom: 10px;
 }
 
-.section-title h2{
-    font-size:2.3rem;
-    color:var(--navy);
+/* Reviews */
+.reviews {
+    margin-top: 40px;
 }
 
-.section-title h2::after{
-    content:'';
-    width:60px;
-    height:2px;
-    background:var(--navy);
-    display:block;
-    margin:15px auto;
+.review {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-/* Products */
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:40px;
+/* CTA Banner */
+.cta {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 40px;
 }
 
-.card{
-    background:var(--light);
-    border:1px solid var(--soft);
-    transition:.4s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 50px rgba(0,0,0,0.05);
-}
-
-.img-box{
-    height:300px;
-    background:#fafafa;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.img-box img{
-    width:85%;
-    transition:.4s;
-}
-
-.card:hover img{
-    transform:scale(1.08);
-}
-
-.info{
-    padding:25px;
-    text-align:center;
-}
-
-.info h3{
-    font-size:1rem;
-    margin-bottom:10px;
-    min-height:45px;
-}
-
-.price{
-    color:var(--navy);
-    font-weight:700;
-    margin-bottom:15px;
-    display:block;
-}
-
-/* Cart Button */
-.btn-cart{
-    width:100%;
-    padding:12px;
-    background:var(--navy);
-    color:white;
-    border:none;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.btn-cart:hover{
-    background:#16202c;
-}
-
-/* Footer */
-footer{
-    background:var(--navy);
-    color:white;
-    text-align:center;
-    padding:60px 8% 20px;
-}
-
-footer h3{
-    margin-bottom:15px;
-}
-
-.socials i{
-    margin:10px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.socials i:hover{
-    color:var(--beige);
-}
-
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
+.cta button {
+    margin-top: 15px;
+    background: #e6d3b3;
+    color: #000;
 }
 
 /* Mobile */
 @media(max-width:768px){
-    .hero h1{font-size:2.2rem;}
-    .nav-links{display:none;}
+    .product {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
+
 </head>
 
 <body>
 
-<header>
-<div class="logo">DIVAN</div>
+<div class="nav">DIVAN | Luxury Care</div>
 
-<nav class="nav-links">
-<a href="#">الرئيسية</a>
-<a href="#">العناية</a>
-<a href="#">المنظفات</a>
-<a href="#">من نحن</a>
-</nav>
-
-<div class="cart-icon">
-<i class="fa-solid fa-cart-shopping"></i>
-</div>
-</header>
-
-<section class="hero">
-<div>
-<h1>نظافة راقية… بتفاصيل أدق</h1>
-<p>منتجات مصممة لأسلوب حياة هادئ وفاخر</p>
-<a href="#shop" class="btn">تسوق الآن</a>
-</div>
-</section>
-
-<section class="container" id="shop">
-
-<div class="section-title">
-<h2>مختارات ديڤان</h2>
+<div class="hero">
+    <h1>مو بس تقشير… تجربة فخامة لبشرتك</h1>
+    <p>نتيجة من أول استخدام ✨</p>
 </div>
 
-<div class="products">
+<div class="container">
+    <div class="product">
 
-<div class="card">
-<div class="img-box">
-<img src="https://divansa.com/storage/images/products/360452681.jpg">
-</div>
-<div class="info">
-<h3>لوشن الجسم + جل الاستحمام</h3>
-<span class="price">25.99 ر.س</span>
-<button class="btn-cart">أضف للسلة</button>
-</div>
-</div>
+        <!-- صورة المنتج -->
+        <img src="https://via.placeholder.com/500x500" alt="product">
 
-<div class="card">
-<div class="img-box">
-<img src="https://divansa.com/storage/images/products/535672142.jpg">
-</div>
-<div class="info">
-<h3>مجموعة الشامبو الفاخرة</h3>
-<span class="price">22.55 ر.س</span>
-<button class="btn-cart">أضف للسلة</button>
-</div>
-</div>
+        <!-- التفاصيل -->
+        <div>
+            <h2>مقشر السكر الرغوي</h2>
 
-<div class="card">
-<div class="img-box">
-<img src="https://divansa.com/storage/images/products/1715024410_663a8a1a31d7e.jpg">
-</div>
-<div class="info">
-<h3>زبدة الشيا الأصلية</h3>
-<span class="price">195 ر.س</span>
-<button class="btn-cart">أضف للسلة</button>
-</div>
-</div>
+            <div class="price">
+                27.75 ر.س
+                <span class="old-price">36.75</span>
+            </div>
 
-<div class="card">
-<div class="img-box">
-<img src="https://divansa.com/storage/images/products/1715024411_663a8a1b4e5d6.jpg">
-</div>
-<div class="info">
-<h3>منظف لافندر فاخر</h3>
-<span class="price">39 ر.س</span>
-<button class="btn-cart">أضف للسلة</button>
-</div>
-</div>
+            <p>
+                مقشر فاخر يزيل الجلد الميت ويمنحك بشرة ناعمة ومشرقة من أول استخدام.
+            </p>
 
-</div>
-</section>
+            <ul class="features">
+                <li>✔ تقشير عميق بدون جفاف</li>
+                <li>✔ ترطيب فوري</li>
+                <li>✔ رائحة فاخرة تدوم</li>
+                <li>✔ مناسب لجميع أنواع البشرة</li>
+            </ul>
 
-<footer>
-<h3>DIVAN</h3>
-<p>أسلوب نظافة يعكس ذوقك</p>
+            <button class="btn">اطلبي الآن</button>
 
-<div class="socials">
-<i class="fab fa-instagram"></i>
-<i class="fab fa-snapchat"></i>
-<i class="fab fa-whatsapp"></i>
+            <p style="color:red; margin-top:10px;">
+                🔥 الكمية محدودة!
+            </p>
+        </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="reviews">
+        <h2>آراء العملاء</h2>
+
+        <div class="review">✨ "بشرتي صارت ناعمة من أول مرة!"</div>
+        <div class="review">✨ "الرائحة خيااال، حرفياً إدمان"</div>
+        <div class="review">✨ "أفضل مقشر استخدمته!"</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+        <h2>جاهزة لتجربة الفرق؟</h2>
+        <p>اطلبي الآن قبل نفاد الكمية</p>
+        <button class="btn">اشتري الآن</button>
+    </div>
 </div>
 
-<p style="opacity:.6;font-size:12px;margin-top:20px;">
-© 2026 جميع الحقوق محفوظة
-</p>
-</footer>
+<script>
+document.querySelectorAll(".btn").forEach(btn=>{
+    btn.onclick = () => {
+        alert("تمت الإضافة للسلة 🛒");
+    }
+});
+</script>
 
 </body>
 </html>
