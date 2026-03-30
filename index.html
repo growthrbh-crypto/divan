@@ -4,131 +4,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DIVAN | Luxury Care</title>
+<title>DIVAN Luxury</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
 
+/* GLOBAL */
 body {
     margin: 0;
     font-family: 'Tajawal', sans-serif;
-    background: #f8f5ef;
+    background: #f9f6f1;
     color: #111;
+    overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* NAV */
 .nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
-    background: #0b132b;
+    z-index: 1000;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
     color: white;
-}
-
-.logo {
-    font-weight: 700;
-    letter-spacing: 2px;
 }
 
 /* HERO */
 .hero {
-    height: 90vh;
-    background: url('https://images.unsplash.com/photo-1600180758890-6b94519a8ba8') center/cover;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1611080626919-7cf5a9f6c4f2') center/cover fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 45px;
-    margin-bottom: 15px;
+    font-size: 60px;
+    color: white;
+    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 18px;
+    color: #ddd;
 }
 
 /* BUTTON */
 .btn {
     margin-top: 20px;
-    background: #e6d3b3;
-    color: #000;
-    padding: 15px 30px;
+    padding: 15px 35px;
+    border-radius: 40px;
     border: none;
+    background: linear-gradient(135deg,#e6d3b3,#cbb38a);
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 30px;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .btn:hover {
-    background: #d4c0a1;
+    transform: scale(1.08);
 }
 
 /* SECTION */
 .section {
-    padding: 80px 40px;
-    max-width: 1200px;
-    margin: auto;
+    padding: 120px 60px;
 }
 
-/* PRODUCTS */
+/* PRODUCTS GRID */
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 50px;
 }
 
+/* CARD */
 .card {
-    background: white;
-    border-radius: 20px;
+    position: relative;
     overflow: hidden;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
+    border-radius: 25px;
+    background: white;
+    transition: 0.5s;
 }
 
 .card img {
     width: 100%;
-    height: 280px;
+    height: 350px;
     object-fit: cover;
+    transition: 0.6s;
 }
 
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* CARD CONTENT */
 .card-content {
-    padding: 20px;
+    padding: 25px;
 }
 
 .price {
-    color: #0b132b;
     font-weight: bold;
+    color: #0b132b;
 }
 
-/* FEATURE STRIP */
-.strip {
-    background: #0b132b;
-    color: white;
-    text-align: center;
-    padding: 40px;
+/* SCROLL ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* CTA */
 .cta {
     text-align: center;
-    margin-top: 50px;
+    padding: 100px;
+    background: #0b132b;
+    color: white;
 }
 
 /* FOOTER */
 .footer {
-    background: #0b132b;
-    color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
+    background: #000;
+    color: white;
 }
 
 </style>
@@ -138,75 +144,75 @@ body {
 
 <!-- NAV -->
 <div class="nav">
-    <div class="logo">DIVAN</div>
+    <div>DIVAN</div>
     <div>Luxury Care</div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
     <div>
-        <h1>الفخامة تبدأ من بشرتك</h1>
-        <p>منتجات عناية مصممة لتمنحك تجربة استثنائية</p>
-        <button class="btn">اكتشفي الآن</button>
+        <h1>DIVAN</h1>
+        <p>Where Luxury Meets Skin</p>
+        <button class="btn">Shop Now</button>
     </div>
 </div>
 
 <!-- PRODUCTS -->
 <div class="section">
-    <h2>منتجاتنا</h2>
-
     <div class="products">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc">
+        <div class="card fade">
+            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273">
             <div class="card-content">
                 <h3>مقشر السكر الرغوي</h3>
                 <p class="price">27.75 ر.س</p>
-                <button class="btn">شراء</button>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273">
+        <div class="card fade">
+            <img src="https://images.unsplash.com/photo-1585386959984-a41552262a5a">
             <div class="card-content">
                 <h3>غسول فاخر</h3>
                 <p class="price">35 ر.س</p>
-                <button class="btn">شراء</button>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1585386959984-a41552262a5a">
+        <div class="card fade">
+            <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc">
             <div class="card-content">
                 <h3>كريم ترطيب</h3>
                 <p class="price">45 ر.س</p>
-                <button class="btn">شراء</button>
             </div>
         </div>
 
     </div>
 </div>
 
-<!-- STRIP -->
-<div class="strip">
-    ✨ أكثر من 10,000 عميلة تثق بنا
-</div>
-
 <!-- CTA -->
-<div class="section cta">
-    <h2>جاهزة لتجربة الفخامة؟</h2>
+<div class="cta">
+    <h2>ابدئي رحلتك مع الفخامة</h2>
     <button class="btn">اطلبي الآن</button>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-    © 2026 DIVAN - All Rights Reserved
+    © DIVAN 2026
 </div>
 
 <script>
-document.querySelectorAll(".btn").forEach(btn=>{
-    btn.onclick = () => alert("تمت الإضافة للسلة 🛒");
+
+/* Scroll Animation */
+const fades = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    fades.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.classList.add('show');
+        }
+    });
 });
+
 </script>
 
 </body>
