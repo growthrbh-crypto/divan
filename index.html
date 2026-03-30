@@ -1,55 +1,39 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ديڤان | Divan - أسلوب حياة أكثر نقاءً</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); }
-        .hero-section {
-            background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover; background-position: center;
-        }
-        .product-card:hover img { transform: scale(1.05); }
-        .accent-gold { color: #b89354; }
-        .bg-accent-gold { background-color: #b89354; }
-    </style>
-</head>
-<body class="bg-[#fafafa] text-gray-900">
+<div class="products">
 
-    <div class="bg-black text-white text-center py-2 text-xs md:text-sm tracking-widest uppercase">
-        🚚 شحن مجاني للطلبات فوق 395 ريال – لفترة محدودة
+    <!-- PRODUCT 1 -->
+    <div class="card fade">
+        <img src="PUT_IMAGE_LINK_HERE">
+        <div class="card-content">
+            <h3>مقشر السكر الرغوي</h3>
+            <p class="price">27.75 ر.س</p>
+            <a href="PUT_PRODUCT_LINK_HERE" target="_blank">
+                <button class="btn">تفاصيل</button>
+            </a>
+        </div>
     </div>
 
-    <nav class="sticky top-0 z-50 glass-nav border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-3xl font-bold tracking-tighter accent-gold serif">DIVAN</div>
-            <div class="hidden md:flex space-x-reverse space-x-10 text-sm font-medium">
-                <a href="#" class="hover:accent-gold transition">الرئيسية</a>
-                <a href="#" class="hover:accent-gold transition">منظفات ديفان</a>
-                <a href="#" class="hover:accent-gold transition">زبدة الشيا</a>
-                <a href="#" class="hover:accent-gold transition">العروض</a>
-            </div>
-            <div class="flex items-center space-x-reverse space-x-4">
-                <button class="p-2">🔍</button>
-                <button class="bg-black text-white px-5 py-2 text-sm rounded-sm hover:bg-accent-gold transition">تسوق الآن</button>
-            </div>
+    <!-- PRODUCT 2 -->
+    <div class="card fade">
+        <img src="PUT_IMAGE_LINK_HERE">
+        <div class="card-content">
+            <h3>غسول الجسم الفاخر</h3>
+            <p class="price">35 ر.س</p>
+            <a href="PUT_PRODUCT_LINK_HERE" target="_blank">
+                <button class="btn">تفاصيل</button>
+            </a>
         </div>
-    </nav>
+    </div>
 
-    <section class="hero-section h-[85vh] flex items-center justify-start px-8 md:px-24">
-        <div class="max-w-2xl bg-white/40 p-8 md:p-12 backdrop-blur-sm rounded-lg">
-            <span class="accent-gold font-semibold tracking-widest text-sm mb-4 block">مرحباً بك في عالم النقاء</span>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 serif leading-tight">ديڤان.. أسلوب حياة أكثر نقاءً</h1>
-            <p class="text-lg text-gray-700 mb-8 leading-relaxed">تجربة تهتم بكل تفصيلة صغيرة؛ من ملمس اليد بعد الغسيل، إلى رائحة بيتك الفاخرة بعد التنظيف.</p>
-            <div class="flex gap-4">
-                <a href="#products" class="bg-black text-white px-8 py-4 text-sm font-bold hover:bg-accent-gold transition">اكتشف المجموعات</a>
-            </div>
+    <!-- PRODUCT 3 -->
+    <div class="card fade">
+        <img src="PUT_IMAGE_LINK_HERE">
+        <div class="card-content">
+            <h3>كريم الترطيب</h3>
+            <p class="price">45 ر.س</p>
+            <a href="PUT_PRODUCT_LINK_HERE" target="_blank">
+                <button class="btn">تفاصيل</button>
+            </a>
         </div>
-    </section>
+    </div>
 
-    <section id="products" class="py-20 max-w-7xl mx
+</div>
