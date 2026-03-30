@@ -4,203 +4,208 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>مقشر السكر الرغوي | تجربة فاخرة لبشرة ناعمة</title>
+<title>DIVAN | Luxury Care</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+
 body {
     margin: 0;
     font-family: 'Tajawal', sans-serif;
-    background: #f5f1ea;
-    color: #1c1c1c;
+    background: #f8f5ef;
+    color: #111;
 }
 
-/* Navbar */
+/* NAVBAR */
 .nav {
-    background: #0f172a;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #0b132b;
     color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 18px;
-    letter-spacing: 1px;
 }
 
-/* Hero */
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* HERO */
 .hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1600180758890-6b94519a8ba8') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
-    padding: 50px 20px;
 }
 
 .hero h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 45px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    color: #555;
-}
-
-/* Product */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-
-.product {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-}
-
-.product img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-/* Price */
-.price {
-    font-size: 28px;
-    color: #0f172a;
-    margin: 15px 0;
-}
-
-.old-price {
-    text-decoration: line-through;
-    color: gray;
     font-size: 18px;
 }
 
-/* Button */
+/* BUTTON */
 .btn {
-    background: #0f172a;
-    color: white;
-    padding: 15px;
+    margin-top: 20px;
+    background: #e6d3b3;
+    color: #000;
+    padding: 15px 30px;
     border: none;
-    width: 100%;
-    font-size: 18px;
-    border-radius: 10px;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #1e293b;
+    background: #d4c0a1;
 }
 
-/* Features */
-.features {
-    margin-top: 20px;
+/* SECTION */
+.section {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.features li {
-    margin-bottom: 10px;
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
 }
 
-/* Reviews */
-.reviews {
-    margin-top: 40px;
-}
-
-.review {
+.card {
     background: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
-/* CTA Banner */
-.cta {
-    background: #0f172a;
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.price {
+    color: #0b132b;
+    font-weight: bold;
+}
+
+/* FEATURE STRIP */
+.strip {
+    background: #0b132b;
     color: white;
     text-align: center;
     padding: 40px;
-    margin-top: 40px;
 }
 
-.cta button {
-    margin-top: 15px;
-    background: #e6d3b3;
-    color: #000;
+/* CTA */
+.cta {
+    text-align: center;
+    margin-top: 50px;
 }
 
-/* Mobile */
-@media(max-width:768px){
-    .product {
-        grid-template-columns: 1fr;
-    }
+/* FOOTER */
+.footer {
+    background: #0b132b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
 }
+
 </style>
-
 </head>
 
 <body>
 
-<div class="nav">DIVAN | Luxury Care</div>
-
-<div class="hero">
-    <h1>مو بس تقشير… تجربة فخامة لبشرتك</h1>
-    <p>نتيجة من أول استخدام ✨</p>
+<!-- NAV -->
+<div class="nav">
+    <div class="logo">DIVAN</div>
+    <div>Luxury Care</div>
 </div>
 
-<div class="container">
-    <div class="product">
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>الفخامة تبدأ من بشرتك</h1>
+        <p>منتجات عناية مصممة لتمنحك تجربة استثنائية</p>
+        <button class="btn">اكتشفي الآن</button>
+    </div>
+</div>
 
-        <!-- صورة المنتج -->
-        <img src="https://via.placeholder.com/500x500" alt="product">
+<!-- PRODUCTS -->
+<div class="section">
+    <h2>منتجاتنا</h2>
 
-        <!-- التفاصيل -->
-        <div>
-            <h2>مقشر السكر الرغوي</h2>
+    <div class="products">
 
-            <div class="price">
-                27.75 ر.س
-                <span class="old-price">36.75</span>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc">
+            <div class="card-content">
+                <h3>مقشر السكر الرغوي</h3>
+                <p class="price">27.75 ر.س</p>
+                <button class="btn">شراء</button>
             </div>
-
-            <p>
-                مقشر فاخر يزيل الجلد الميت ويمنحك بشرة ناعمة ومشرقة من أول استخدام.
-            </p>
-
-            <ul class="features">
-                <li>✔ تقشير عميق بدون جفاف</li>
-                <li>✔ ترطيب فوري</li>
-                <li>✔ رائحة فاخرة تدوم</li>
-                <li>✔ مناسب لجميع أنواع البشرة</li>
-            </ul>
-
-            <button class="btn">اطلبي الآن</button>
-
-            <p style="color:red; margin-top:10px;">
-                🔥 الكمية محدودة!
-            </p>
         </div>
-    </div>
 
-    <!-- Reviews -->
-    <div class="reviews">
-        <h2>آراء العملاء</h2>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273">
+            <div class="card-content">
+                <h3>غسول فاخر</h3>
+                <p class="price">35 ر.س</p>
+                <button class="btn">شراء</button>
+            </div>
+        </div>
 
-        <div class="review">✨ "بشرتي صارت ناعمة من أول مرة!"</div>
-        <div class="review">✨ "الرائحة خيااال، حرفياً إدمان"</div>
-        <div class="review">✨ "أفضل مقشر استخدمته!"</div>
-    </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1585386959984-a41552262a5a">
+            <div class="card-content">
+                <h3>كريم ترطيب</h3>
+                <p class="price">45 ر.س</p>
+                <button class="btn">شراء</button>
+            </div>
+        </div>
 
-    <!-- CTA -->
-    <div class="cta">
-        <h2>جاهزة لتجربة الفرق؟</h2>
-        <p>اطلبي الآن قبل نفاد الكمية</p>
-        <button class="btn">اشتري الآن</button>
     </div>
+</div>
+
+<!-- STRIP -->
+<div class="strip">
+    ✨ أكثر من 10,000 عميلة تثق بنا
+</div>
+
+<!-- CTA -->
+<div class="section cta">
+    <h2>جاهزة لتجربة الفخامة؟</h2>
+    <button class="btn">اطلبي الآن</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 DIVAN - All Rights Reserved
 </div>
 
 <script>
 document.querySelectorAll(".btn").forEach(btn=>{
-    btn.onclick = () => {
-        alert("تمت الإضافة للسلة 🛒");
-    }
+    btn.onclick = () => alert("تمت الإضافة للسلة 🛒");
 });
 </script>
 
